@@ -1,0 +1,79 @@
+/* src/Styles/Counter.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Centre verticalement le contenu */
+  justify-content: center; /* Centre horizontalement le contenu */
+  background-image: url('../assets/fond.jpg'); /* Assurez-vous que le chemin est correct */
+  background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center center; /* Centre l'image horizontalement et verticalement */
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%; /* Largeur étendue pour former un rectangle */
+  max-width: 800px; /* Largeur maximale pour les grands écrans */
+  background-color: rgba(139, 0, 0, 0.8); /* Fond rouge foncé semi-transparent pour le conteneur */
+  padding: 60px 30px; /* Ajout d'espace pour augmenter la taille du conteneur */
+  border-radius: 15px; /* Arrondir les coins pour un effet plus doux */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre pour un effet 3D */
+}
+
+.title {
+  font-weight: bold;
+  font-size: 32px;
+  color: white; /* Couleur du texte en blanc pour le contraste */
+  margin-bottom: 20px;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #8B0000; /* Fond bordeaux pour le compteur */
+  width: 100%; /* Prendre toute la largeur du conteneur */
+  justify-content: space-between;
+  height: 80px;
+}
+
+.decrement,
+.increment {
+  font-size: 24px;
+  width: 60px; /* Augmentation de la taille des boutons */
+  height: 60px; /* Augmentation de la taille des boutons */
+  border: none;
+  background-color: #F5F5DC; /* Fond beige clair pour les boutons */
+  color: #8B0000; /* Texte des boutons en bordeaux pour correspondre au fond */
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.2s, transform 0.2s; /* Ajout de la transition pour les boutons */
+  box-shadow: 0 4px #BC8F8F; /* Ombre 3D pour les boutons */
+}
+
+.decrement:active,
+.increment:active {
+  box-shadow: 0 2px #BC8F8F; /* Réduction de l'ombre lors du clic pour un effet 3D */
+  transform: translateY(2px); /* Déplacement vers le bas pour l'effet 3D */
+}
+
+.decrement:hover,
+.increment:hover {
+  background-color: #FFFFF0; /* Couleur de survol ivoire pour les boutons */
+}
+
+span {
+  font-size: 28px; /* Augmentation de la taille du texte du compteur */
+  margin: 0 20px;
+  flex-grow: 1;
+  text-align: center;
+  color: white; /* Texte du compteur en blanc */
+}
